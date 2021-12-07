@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: #f2f2f2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  width: 100%;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.dropdown{
+  width: 400px;
+  user-select: none;
+  margin: 100px auto;
+  position: relative;
+}
+
+.dropdown .dropdown-btn{
+  padding:15px 20px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06);
+  font-weight: bold;
+  color: #333;
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown .dropdown-content{
+  position: absolute;
+  top:110%;
+  left:0;
+  padding:10px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06);
+  font-weight: 500;
+  color: #333;
+  width: 95%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown .dropdown-content .dropdown-item{
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown .dropdown-content .dropdown-item:hover{
+  background: rgb(92, 142, 235);
+  color: #fff;
 }
