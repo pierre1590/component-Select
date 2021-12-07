@@ -1,5 +1,6 @@
-import { FaCaretDown } from "react-icons/fa";
+import { FaCaretDown,FaCaretUp } from "react-icons/fa";
 import { useState } from "react";
+
 const options = [
     {label:'Piero Sabino', value:'Piero Sabino'},
     {label:'Edmondo di Ronza', value:'Edmondo di Ronza'},
@@ -15,7 +16,7 @@ function Select({selected, setSelected}) {
      <h2 style={{textAlign:'center'}}>Select a member</h2>
       <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
         {selected}
-        <FaCaretDown />
+       {isActive ? <FaCaretUp /> : <FaCaretDown />}
       </div>
       {isActive && (
         <div className="dropdown-content">
