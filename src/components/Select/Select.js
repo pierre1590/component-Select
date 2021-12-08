@@ -10,6 +10,7 @@ const options = [
 
 function Select({selected, setSelected}) {
   const [isActive, setIsActive] = useState(false);
+  console.log(selected);
   return (
    
     <div className="dropdown">
